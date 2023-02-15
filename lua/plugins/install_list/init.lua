@@ -64,6 +64,18 @@ return require('packer').startup(function()
 			require('plugins/cmp')
 		end
 	}
+	
+	use {
+                'mrcjkb/haskell-tools.nvim',
+  		requires = {
+    			'nvim-lua/plenary.nvim',
+    			'nvim-telescope/telescope.nvim', -- optional
+  		},
+  		branch = '1.x.x', -- recommended
+  		config = function()
+			require('plugins/haskell-tools')
+		end
+	}
 
 	-- Иконки для автодополнения
 	use {
@@ -208,19 +220,7 @@ return require('packer').startup(function()
 		"vim-test/vim-test",
 	}
 	
-	use {
-  		'mrcjkb/haskell-tools.nvim',
-  		requires = {
-    		'neovim/nvim-lspconfig',
-    		'nvim-lua/plenary.nvim',
-    		'nvim-telescope/telescope.nvim', -- optional
-  		},
-  		branch = '1.x.x', -- [^1]
-  		config = function()
-			require('plugins/haskell-tools')
-		end
-	}
-
+	
 	-- Документация
 	use {
 		'danymat/neogen',

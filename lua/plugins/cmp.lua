@@ -5,9 +5,15 @@ cmp.setup{
 
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			require'luasnip'.lsp_expand(args.body) -- Luasnip expand
+			 vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+			--require'luasnip'.lsp_expand(args.body) -- Luasnip expand
 		end,
 	},
+	
+	window = {
+      		--completion = cmp.config.window.bordered(),
+      		--documentation = cmp.config.window.bordered(),
+    	},
 
 	-- Клавиши, которые будут взаимодействовать в nvim-cmp
 	mapping = {

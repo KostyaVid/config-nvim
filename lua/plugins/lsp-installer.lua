@@ -17,7 +17,7 @@ lspinstaller.setup{
 		'cssls',                  -- CSS
 		'emmet_ls',               -- HTML
 		'jedi_language_server',   -- Python
-		'sumneko_lua',            -- Lua
+		'lua_ls',                 -- Lua
 		'tsserver',               -- Typescript, Javascript
 		'volar'                   -- Vue
 	},
